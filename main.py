@@ -1,14 +1,12 @@
-#!/usr/bin/env python3
-"""Ejemplo mínimo de script Python ejecutable en Docker."""
+import os
+import requests
+from google.auth import default
+from google.auth.transport.requests import AuthorizedSession
+from google.cloud import storage, bigquery
+import functions_framework
+from google.api_core.exceptions import NotFound
 
-import sys
-from datetime import datetime
 
-def main():
-    now = datetime.now().isoformat(timespec="seconds")
-    msg = "¡Hola desde Docker y Python!"
-    print(f"[{now}] {msg}")
-
-if __name__ == "__main__":
-    main()
-
+@functions_framework.http
+def sheet_to_bq(request):
+    print("Hola Mundo")
