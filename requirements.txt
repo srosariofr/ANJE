@@ -1,3 +1,5 @@
-# Deja este archivo vacío si no necesitas dependencias externas.
-# Ejemplo para más adelante:
-# requests==2.32.3
+google-cloud-bigquery
+google-cloud-storage
+requests
+google-auth
+functions-framework
